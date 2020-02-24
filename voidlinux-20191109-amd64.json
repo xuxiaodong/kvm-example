@@ -1,0 +1,60 @@
+{
+  "variables": {
+    "major_version": "2019",
+    "minor_version": "1109",
+    "void_version": "{{user `major_version`}}{{user `minor_version`}}",
+    "mirror": "https://a-hel-fi.m.voidlinux.org",
+    "mirror_directory": "live/current",
+    "iso_name": "void-live-x86_64-{{user `void_version`}}.iso",
+    "iso_checksum": "c471733859ff0a315e3848fe39c153e22700b1baa039453358643bbae93b7058",
+    "iso_checksum_type": "sha256",
+    "install_path": "voidlinux-{{user `major_version`}}",
+    "name_template": "voidlinux-{{user `void_version`}}-amd64"
+  },
+  "builders": [{
+    "type": "qemu",
+    "cpus": 1,
+    "memory": 1024,
+    "disk_size": 65536,
+    "vm_name": "{{user `name_template`}}",
+    "output_directory": "builds/packer-{{user `name_template`}}",
+    "iso_url": "{{user `mirror`}}/{{user `mirror_directory`}}/{{user `iso_name`}}",
+    "iso_checksum": "{{user `iso_checksum`}}",
+    "iso_checksum_type": "{{user `iso_checksum_type`}}",
+    "http_directory": "http",
+    "boot_wait": "5s",
+    "boot_command": [
+      "<enter><wait30s>",
+      "root<enter><wait>",
+      "voidlinux<enter><wait>",
+      "yes | xbps-install -Su<enter><wait15m>",
+      "yes | xbps-install wget<enter><wait10m>",
+      "wget 'http://{{.HTTPIP}}:{{.HTTPPort}}/{{user `install_path`}}/install.sh'<enter><wait>",
+      "wget 'http://{{.HTTPIP}}:{{.HTTPPort}}/{{user `install_path`}}/install-chroot.sh'<enter><wait>",
+      "bash install.sh<enter><wait1h>"
+    ],
+    "shutdown_command": "echo 'vagrant' | sudo -S /sbin/shutdown -hP now",
+    "communicator": "ssh",
+    "ssh_port": 22,
+    "ssh_username": "vagrant",
+    "ssh_password": "vagrant",
+    "ssh_timeout": "20000s"
+  }],
+  "provisioners": [{
+    "type": "shell",
+    "environment_vars": [
+      "HOME_DIR=/home/vagrant"
+    ],
+    "scripts": [
+      "scripts/common/sudoers.sh",
+      "scripts/common/vagrant.sh"
+    ],
+    "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E sh -eux '{{.Path}}'",
+    "expect_disconnect": true
+  }],
+  "post-processors": [{
+    "type": "vagrant",
+    "keep_input_artifact": true,
+    "output": "builds/{{user `name_template`}}-{{.Provider}}.box"
+  }]
+}

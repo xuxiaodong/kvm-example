@@ -1,0 +1,56 @@
+{
+  "variables": {
+    "major_version": "8",
+    "minor_version": "1",
+    "revision_version": "1911",
+    "centos_version": "{{user `major_version}}.{{user `minor_version`}}",
+    "full_version": "{{user `centos_version`}}.{{user `revision_version`}}",
+    "mirror": "http://mirrors.zju.edu.cn/centos",
+    "mirror_directory": "{{user `full_version`}}/isos/x86_64",
+    "iso_name": "CentOS-{{user `full_version`}}-x86_64-dvd1.iso",
+    "iso_checksum": "3ee3f4ea1538e026fff763e2b284a6f20b259d91d1ad5688f5783a67d279423b",
+    "iso_checksum_type": "sha256",
+    "ks_path": "centos-{{user `major_version`}}/ks.cfg",
+    "name_template": "centos-{{user `centos_version`}}-amd64"
+  },
+  "builders": [{
+    "type": "qemu",
+    "cpus": 1,
+    "memory": 1024,
+    "disk_size": 65536,
+    "vm_name": "{{user `name_template`}}",
+    "output_directory": "builds/packer-{{user `name_template`}}",
+    "iso_url": "{{user `mirror`}}/{{user `mirror_directory`}}/{{user `iso_name`}}",
+    "iso_checksum": "{{user `iso_checksum`}}",
+    "iso_checksum_type": "{{user `iso_checksum_type`}}",
+    "http_directory": "http",
+    "boot_wait": "10s",
+    "boot_command": [
+      "<up><wait><tab> text ks=http://{{.HTTPIP}}:{{.HTTPPort}}/{{user `ks_path`}}<enter><wait>"
+    ],
+    "shutdown_command": "echo 'vagrant' | sudo -S /sbin/shutdown -hP now",
+    "communicator": "ssh",
+    "ssh_port": 22,
+    "ssh_username": "vagrant",
+    "ssh_password": "vagrant",
+    "ssh_timeout": "10000s"
+  }],
+  "provisioners": [{
+    "type": "shell",
+    "environment_vars": [
+      "HOME_DIR=/home/vagrant"
+    ],
+    "scripts": [
+      "scripts/common/sudoers.sh",
+      "scripts/common/vagrant.sh",
+      "scripts/centos/cleanup.sh"
+    ],
+    "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E sh '{{.Path}}'",
+    "expect_disconnect": true
+  }],
+  "post-processors": [{
+    "type": "vagrant",
+    "keep_input_artifact": true,
+    "output": "builds/{{user `name_template`}}-{{.Provider}}.box"
+  }]
+}

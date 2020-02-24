@@ -1,0 +1,63 @@
+{
+  "variables": {
+    "major_version": "6",
+    "minor_version": "6",
+    "openbsd_version": "{{user `major_version`}}.{{user `minor_version`}}",
+    "mirror": "https://fastly.cdn.openbsd.org",
+    "mirror_directory": "pub/OpenBSD/{{user `openbsd_version`}}/amd64",
+    "iso_name": "install{{user `major_version`}}{{user `minor_version`}}.iso",
+    "iso_checksum": "b22e63df56e6266de6bbeed8e9be0fbe9ee2291551c5bc03f3cc2e4ab9436ee3",
+    "iso_checksum_type": "sha256",
+    "name_template": "openbsd-{{user `openbsd_version`}}-amd64"
+  },
+  "builders": [{
+    "type": "qemu",
+    "cpus": 1,
+    "memory": 1024,
+    "disk_size": 65536,
+    "vm_name": "{{user `name_template`}}",
+    "output_directory": "builds/packer-{{user `name_template`}}",
+    "iso_url": "{{user `mirror`}}/{{user `mirror_directory`}}/{{user `iso_name`}}",
+    "iso_checksum": "{{user `iso_checksum`}}",
+    "iso_checksum_type": "{{user `iso_checksum_type`}}",
+    "boot_wait": "30s",
+    "boot_command": [
+      "S<enter>",
+      "cat <<EOF >>install.conf<enter>",
+      "System hostname = openbsd{{user `openbsd_version`}}<enter>",
+      "Password for root = vagrant<enter>",
+      "Setup a user = vagrant<enter>",
+      "Password for user = vagrant<enter>",
+      "Allow root ssh login = yes<enter>",
+      "What timezone are you in = UTC<enter>",
+      "Location of sets = cd<enter>",
+      "Set name(s) = -game*.tgz -x*.tgz<enter>",
+      "Directory does not contain SHA256.sig. Continue without verification = yes<enter>",
+      "EOF<enter>",
+      "install -af install.conf && reboot<enter>"
+    ],
+    "shutdown_command": "/sbin/halt -p",
+    "communicator": "ssh",
+    "ssh_port": 22,
+    "ssh_username": "root",
+    "ssh_password": "vagrant",
+    "ssh_timeout": "10000s"
+  }],
+  "provisioners": [{
+    "type": "shell",
+    "environment_vars": [
+      "HOME_DIR=/home/vagrant"
+    ],
+    "scripts": [
+      "scripts/openbsd/setup.sh",
+      "scripts/common/vagrant.sh"
+    ],
+    "execute_command": "export {{.Vars}} && cat {{.Path}} | su -m",
+    "expect_disconnect": true
+  }],
+  "post-processors": [{
+    "type": "vagrant",
+    "keep_input_artifact": true,
+    "output": "builds/{{user `name_template`}}-{{.Provider}}.box"
+  }]
+}

@@ -1,0 +1,59 @@
+{
+  "variables": {
+    "major_version": "15",
+    "minor_version": "1",
+    "opensuse_version": "{{user `major_version`}}.{{user `minor_version`}}",
+    "mirror": "https://download.opensuse.org",
+    "mirror_directory": "distribution/leap/{{user `opensuse_version`}}/iso",
+    "iso_name": "openSUSE-Leap-{{user `opensuse_version`}}-DVD-x86_64.iso",
+    "iso_checksum": "c6d3ed19fe5cc25c4667bf0b46cc86aebcfbca3b0073aed0a288834600cb8b97",
+    "iso_checksum_type": "sha256",
+    "install_path": "opensuse-{{user `major_version`}}/installer.xml",
+    "name_template": "opensuse-{{user `opensuse_version`}}-amd64"
+  },
+  "builders": [{
+    "type": "qemu",
+    "cpus": 1,
+    "memory": 1024,
+    "disk_size": 65536,
+    "vm_name": "{{user `name_template`}}",
+    "output_directory": "builds/packer-{{user `name_template`}}",
+    "iso_url": "{{user `mirror`}}/{{user `mirror_directory`}}/{{user `iso_name`}}",
+    "iso_checksum": "{{user `iso_checksum`}}",
+    "iso_checksum_type": "{{user `iso_checksum_type`}}",
+    "http_directory": "http",
+    "boot_wait": "10s",
+    "boot_command": [
+      "<esc><enter><wait>",
+      "linux netsetup=dhcp netdevice=eth0 install=cd:/<wait>",
+      " lang=en_US autoyast=http://{{.HTTPIP}}:{{.HTTPPort}}/{{user `install_path`}}<wait>",
+      " textmode=1<wait>",
+      "<enter><wait>"
+    ],
+    "shutdown_command": "echo 'vagrant' | sudo -S /sbin/halt -h -p",
+    "communicator": "ssh",
+    "ssh_port": 22,
+    "ssh_username": "vagrant",
+    "ssh_password": "vagrant",
+    "ssh_timeout": "10000s"
+  }],
+  "provisioners": [{
+    "type": "shell",
+    "environment_vars": [
+      "HOME_DIR=/home/vagrant"
+    ],
+    "scripts": [
+      "scripts/opensuse/setup.sh",
+      "scripts/common/sudoers.sh",
+      "scripts/common/vagrant.sh",
+      "scripts/opensuse/cleanup.sh"
+    ],
+    "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E sh -eux '{{.Path}}'",
+    "expect_disconnect": true
+  }],
+  "post-processors": [{
+    "type": "vagrant",
+    "keep_input_artifact": true,
+    "output": "builds/{{user `name_template`}}-{{.Provider}}.box"
+  }]
+}

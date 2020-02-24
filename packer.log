@@ -1,0 +1,219 @@
+2020/02/20 15:06:50 [INFO] Packer version: 1.4.5
+2020/02/20 15:06:50 Packer Target OS/Arch: linux amd64
+2020/02/20 15:06:50 Built with Go Version: go1.13.4
+2020/02/20 15:06:50 Detected home directory from env var: /home/xiaodong
+2020/02/20 15:06:50 Using internal plugin for azure-arm
+2020/02/20 15:06:50 Using internal plugin for file
+2020/02/20 15:06:50 Using internal plugin for hcloud
+2020/02/20 15:06:50 Using internal plugin for hyperone
+2020/02/20 15:06:50 Using internal plugin for oracle-oci
+2020/02/20 15:06:50 Using internal plugin for proxmox
+2020/02/20 15:06:50 Using internal plugin for ucloud-uhost
+2020/02/20 15:06:50 Using internal plugin for amazon-chroot
+2020/02/20 15:06:50 Using internal plugin for vmware-vmx
+2020/02/20 15:06:50 Using internal plugin for qemu
+2020/02/20 15:06:50 Using internal plugin for triton
+2020/02/20 15:06:50 Using internal plugin for virtualbox-iso
+2020/02/20 15:06:50 Using internal plugin for digitalocean
+2020/02/20 15:06:50 Using internal plugin for profitbricks
+2020/02/20 15:06:50 Using internal plugin for tencentcloud-cvm
+2020/02/20 15:06:50 Using internal plugin for virtualbox-ovf
+2020/02/20 15:06:50 Using internal plugin for amazon-ebs
+2020/02/20 15:06:50 Using internal plugin for cloudstack
+2020/02/20 15:06:50 Using internal plugin for googlecompute
+2020/02/20 15:06:50 Using internal plugin for lxc
+2020/02/20 15:06:50 Using internal plugin for scaleway
+2020/02/20 15:06:50 Using internal plugin for amazon-ebsvolume
+2020/02/20 15:06:50 Using internal plugin for osc-bsusurrogate
+2020/02/20 15:06:50 Using internal plugin for parallels-pvm
+2020/02/20 15:06:50 Using internal plugin for vmware-iso
+2020/02/20 15:06:50 Using internal plugin for yandex
+2020/02/20 15:06:50 Using internal plugin for amazon-instance
+2020/02/20 15:06:50 Using internal plugin for oneandone
+2020/02/20 15:06:50 Using internal plugin for openstack
+2020/02/20 15:06:50 Using internal plugin for lxd
+2020/02/20 15:06:50 Using internal plugin for docker
+2020/02/20 15:06:50 Using internal plugin for jdcloud
+2020/02/20 15:06:50 Using internal plugin for oracle-classic
+2020/02/20 15:06:50 Using internal plugin for osc-bsuvolume
+2020/02/20 15:06:50 Using internal plugin for parallels-iso
+2020/02/20 15:06:50 Using internal plugin for vagrant
+2020/02/20 15:06:50 Using internal plugin for virtualbox-vm
+2020/02/20 15:06:50 Using internal plugin for amazon-ebssurrogate
+2020/02/20 15:06:50 Using internal plugin for azure-chroot
+2020/02/20 15:06:50 Using internal plugin for hyperv-iso
+2020/02/20 15:06:50 Using internal plugin for hyperv-vmcx
+2020/02/20 15:06:50 Using internal plugin for linode
+2020/02/20 15:06:50 Using internal plugin for ncloud
+2020/02/20 15:06:50 Using internal plugin for null
+2020/02/20 15:06:50 Using internal plugin for osc-bsu
+2020/02/20 15:06:50 Using internal plugin for alicloud-ecs
+2020/02/20 15:06:50 Using internal plugin for osc-chroot
+2020/02/20 15:06:50 Using internal plugin for windows-shell
+2020/02/20 15:06:50 Using internal plugin for ansible
+2020/02/20 15:06:50 Using internal plugin for chef-solo
+2020/02/20 15:06:50 Using internal plugin for salt-masterless
+2020/02/20 15:06:50 Using internal plugin for ansible-local
+2020/02/20 15:06:50 Using internal plugin for shell-local
+2020/02/20 15:06:50 Using internal plugin for sleep
+2020/02/20 15:06:50 Using internal plugin for windows-restart
+2020/02/20 15:06:50 Using internal plugin for powershell
+2020/02/20 15:06:50 Using internal plugin for puppet-masterless
+2020/02/20 15:06:50 Using internal plugin for puppet-server
+2020/02/20 15:06:50 Using internal plugin for file
+2020/02/20 15:06:50 Using internal plugin for inspec
+2020/02/20 15:06:50 Using internal plugin for shell
+2020/02/20 15:06:50 Using internal plugin for breakpoint
+2020/02/20 15:06:50 Using internal plugin for chef-client
+2020/02/20 15:06:50 Using internal plugin for converge
+2020/02/20 15:06:50 Using internal plugin for digitalocean-import
+2020/02/20 15:06:50 Using internal plugin for docker-push
+2020/02/20 15:06:50 Using internal plugin for exoscale-import
+2020/02/20 15:06:50 Using internal plugin for googlecompute-export
+2020/02/20 15:06:50 Using internal plugin for vsphere
+2020/02/20 15:06:50 Using internal plugin for alicloud-import
+2020/02/20 15:06:50 Using internal plugin for docker-tag
+2020/02/20 15:06:50 Using internal plugin for ucloud-import
+2020/02/20 15:06:50 Using internal plugin for vagrant-cloud
+2020/02/20 15:06:50 Using internal plugin for artifice
+2020/02/20 15:06:50 Using internal plugin for docker-import
+2020/02/20 15:06:50 Using internal plugin for shell-local
+2020/02/20 15:06:50 Using internal plugin for vsphere-template
+2020/02/20 15:06:50 Using internal plugin for compress
+2020/02/20 15:06:50 Using internal plugin for checksum
+2020/02/20 15:06:50 Using internal plugin for docker-save
+2020/02/20 15:06:50 Using internal plugin for googlecompute-import
+2020/02/20 15:06:50 Using internal plugin for manifest
+2020/02/20 15:06:50 Using internal plugin for vagrant
+2020/02/20 15:06:50 Using internal plugin for amazon-import
+2020/02/20 15:06:50 Detected home directory from env var: /home/xiaodong
+2020/02/20 15:06:50 Attempting to open config file: /home/xiaodong/.packerconfig
+2020/02/20 15:06:50 [WARN] Config file doesn't exist: /home/xiaodong/.packerconfig
+2020/02/20 15:06:50 Packer config: &{DisableCheckpoint:false DisableCheckpointSignature:false PluginMinPort:10000 PluginMaxPort:25000 Builders:map[alicloud-ecs:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-alicloud-ecs amazon-chroot:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-chroot amazon-ebs:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-ebs amazon-ebssurrogate:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-ebssurrogate amazon-ebsvolume:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-ebsvolume amazon-instance:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-instance azure-arm:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-azure-arm azure-chroot:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-azure-chroot cloudstack:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-cloudstack digitalocean:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-digitalocean docker:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-docker file:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-file googlecompute:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-googlecompute hcloud:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-hcloud hyperone:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-hyperone hyperv-iso:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-hyperv-iso hyperv-vmcx:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-hyperv-vmcx jdcloud:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-jdcloud linode:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-linode lxc:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-lxc lxd:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-lxd ncloud:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-ncloud null:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-null oneandone:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-oneandone openstack:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-openstack oracle-classic:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-oracle-classic oracle-oci:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-oracle-oci osc-bsu:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-osc-bsu osc-bsusurrogate:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-osc-bsusurrogate osc-bsuvolume:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-osc-bsuvolume osc-chroot:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-osc-chroot parallels-iso:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-parallels-iso parallels-pvm:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-parallels-pvm profitbricks:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-profitbricks proxmox:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-proxmox qemu:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-qemu scaleway:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-scaleway tencentcloud-cvm:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-tencentcloud-cvm triton:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-triton ucloud-uhost:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-ucloud-uhost vagrant:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-vagrant virtualbox-iso:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-virtualbox-iso virtualbox-ovf:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-virtualbox-ovf virtualbox-vm:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-virtualbox-vm vmware-iso:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-vmware-iso vmware-vmx:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-vmware-vmx yandex:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-yandex] PostProcessors:map[alicloud-import:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-alicloud-import amazon-import:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-amazon-import artifice:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-artifice checksum:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-checksum compress:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-compress digitalocean-import:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-digitalocean-import docker-import:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-docker-import docker-push:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-docker-push docker-save:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-docker-save docker-tag:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-docker-tag exoscale-import:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-exoscale-import googlecompute-export:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-googlecompute-export googlecompute-import:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-googlecompute-import manifest:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-manifest shell-local:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-shell-local ucloud-import:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-ucloud-import vagrant:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-vagrant vagrant-cloud:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-vagrant-cloud vsphere:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-vsphere vsphere-template:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-vsphere-template] Provisioners:map[ansible:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-ansible ansible-local:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-ansible-local breakpoint:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-breakpoint chef-client:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-chef-client chef-solo:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-chef-solo converge:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-converge file:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-file inspec:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-inspec powershell:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-powershell puppet-masterless:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-puppet-masterless puppet-server:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-puppet-server salt-masterless:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-salt-masterless shell:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-shell shell-local:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-shell-local sleep:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-sleep windows-restart:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-windows-restart windows-shell:/usr/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-windows-shell]}
+2020/02/20 15:06:50 Detected home directory from env var: /home/xiaodong
+2020/02/20 15:06:50 Setting cache directory: /home/xiaodong/src/packer-templates/packer_cache
+2020/02/20 15:06:50 Detected home directory from env var: /home/xiaodong
+2020/02/20 15:06:50 Loading builder: qemu
+2020/02/20 15:06:50 Plugin could not be found. Checking same directory as executable.
+2020/02/20 15:06:50 Current exe path: /usr/bin/packer
+2020/02/20 15:06:50 Creating plugin client for path: /usr/bin/packer
+2020/02/20 15:06:50 Starting plugin: /usr/bin/packer []string{"/usr/bin/packer", "plugin", "packer-builder-qemu"}
+2020/02/20 15:06:50 Waiting for RPC address for: /usr/bin/packer
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 [INFO] Packer version: 1.4.5
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Packer Target OS/Arch: linux amd64
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Built with Go Version: go1.13.4
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Detected home directory from env var: /home/xiaodong
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Attempting to open config file: /home/xiaodong/.packerconfig
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 [WARN] Config file doesn't exist: /home/xiaodong/.packerconfig
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Packer config: &{DisableCheckpoint:false DisableCheckpointSignature:false PluginMinPort:10000 PluginMaxPort:25000 Builders:map[] PostProcessors:map[] Provisioners:map[]}
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Detected home directory from env var: /home/xiaodong
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Setting cache directory: /home/xiaodong/src/packer-templates/packer_cache
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 args: []string{"packer-builder-qemu"}
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Plugin minimum port: 10000
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Plugin maximum port: 25000
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Detected home directory from env var: /home/xiaodong
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Plugin address: unix /tmp/packer-plugin866844947
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Waiting for connection...
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Serving a plugin connection...
+2020/02/20 15:06:50 Loading provisioner: shell
+2020/02/20 15:06:50 Plugin could not be found. Checking same directory as executable.
+2020/02/20 15:06:50 Current exe path: /usr/bin/packer
+2020/02/20 15:06:50 Creating plugin client for path: /usr/bin/packer
+2020/02/20 15:06:50 Starting plugin: /usr/bin/packer []string{"/usr/bin/packer", "plugin", "packer-provisioner-shell"}
+2020/02/20 15:06:50 Waiting for RPC address for: /usr/bin/packer
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 [INFO] Packer version: 1.4.5
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Packer Target OS/Arch: linux amd64
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Built with Go Version: go1.13.4
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Detected home directory from env var: /home/xiaodong
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Attempting to open config file: /home/xiaodong/.packerconfig
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 [WARN] Config file doesn't exist: /home/xiaodong/.packerconfig
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Packer config: &{DisableCheckpoint:false DisableCheckpointSignature:false PluginMinPort:10000 PluginMaxPort:25000 Builders:map[] PostProcessors:map[] Provisioners:map[]}
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Detected home directory from env var: /home/xiaodong
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Setting cache directory: /home/xiaodong/src/packer-templates/packer_cache
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 args: []string{"packer-provisioner-shell"}
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Plugin minimum port: 10000
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Plugin maximum port: 25000
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Detected home directory from env var: /home/xiaodong
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Plugin address: unix /tmp/packer-plugin125000451
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Waiting for connection...
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Serving a plugin connection...
+2020/02/20 15:06:50 Loading post-processor: vagrant
+2020/02/20 15:06:50 Plugin could not be found. Checking same directory as executable.
+2020/02/20 15:06:50 Current exe path: /usr/bin/packer
+2020/02/20 15:06:50 Creating plugin client for path: /usr/bin/packer
+2020/02/20 15:06:50 Starting plugin: /usr/bin/packer []string{"/usr/bin/packer", "plugin", "packer-post-processor-vagrant"}
+2020/02/20 15:06:50 Waiting for RPC address for: /usr/bin/packer
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 [INFO] Packer version: 1.4.5
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Packer Target OS/Arch: linux amd64
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Built with Go Version: go1.13.4
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Detected home directory from env var: /home/xiaodong
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Attempting to open config file: /home/xiaodong/.packerconfig
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 [WARN] Config file doesn't exist: /home/xiaodong/.packerconfig
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Packer config: &{DisableCheckpoint:false DisableCheckpointSignature:false PluginMinPort:10000 PluginMaxPort:25000 Builders:map[] PostProcessors:map[] Provisioners:map[]}
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Detected home directory from env var: /home/xiaodong
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Setting cache directory: /home/xiaodong/src/packer-templates/packer_cache
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 args: []string{"packer-post-processor-vagrant"}
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Plugin minimum port: 10000
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Plugin maximum port: 25000
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Plugin address: unix /tmp/packer-plugin844095446
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Waiting for connection...
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Detected home directory from env var: /home/xiaodong
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Serving a plugin connection...
+2020/02/20 15:06:50 ui: [1;32mqemu output will be in this color.[0m
+2020/02/20 15:06:50 ui: 
+2020/02/20 15:06:50 Build debug mode: false
+2020/02/20 15:06:50 Force build: false
+2020/02/20 15:06:50 On error: 
+2020/02/20 15:06:50 Preparing build: qemu
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 use detected accelerator: kvm
+2020/02/20 15:06:50 Waiting on builds to complete...
+2020/02/20 15:06:50 Starting build run: qemu
+2020/02/20 15:06:50 Running builder: qemu
+2020/02/20 15:06:50 [INFO] (telemetry) Starting builder qemu
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Qemu path: /usr/bin/qemu-system-x86_64, Qemu Image page: /usr/bin/qemu-img
+2020/02/20 15:06:50 ui: [1;32m==> qemu: Retrieving ISO[0m
+2020/02/20 15:06:50 ui: [1;32m==> qemu: Trying https://cdimage.debian.org/cdimage/release/10.2.0/amd64/iso-cd/debian-10.2.0-amd64-netinst.iso[0m
+2020/02/20 15:06:50 packer: 2020/02/20 15:06:50 Acquiring lock for: https://cdimage.debian.org/cdimage/release/10.2.0/amd64/iso-cd/debian-10.2.0-amd64-netinst.iso?checksum=sha256%3Ae43fef979352df15056ac512ad96a07b515cb8789bf0bfd86f99ed0404f885f5 (/home/xiaodong/src/packer-templates/packer_cache/4e8d7ef3e371c5430872b1fcb2b65ae64d8792c9.iso.lock)
+2020/02/20 15:06:50 ui: [1;32m==> qemu: Trying https://cdimage.debian.org/cdimage/release/10.2.0/amd64/iso-cd/debian-10.2.0-amd64-netinst.iso?checksum=sha256%3Ae43fef979352df15056ac512ad96a07b515cb8789bf0bfd86f99ed0404f885f5[0m
+2020/02/20 15:06:51 ui: [1;32m==> qemu: https://cdimage.debian.org/cdimage/release/10.2.0/amd64/iso-cd/debian-10.2.0-amd64-netinst.iso?checksum=sha256%3Ae43fef979352df15056ac512ad96a07b515cb8789bf0bfd86f99ed0404f885f5 => /home/xiaodong/src/packer-templates/packer_cache/4e8d7ef3e371c5430872b1fcb2b65ae64d8792c9.iso[0m
+2020/02/20 15:06:51 packer: 2020/02/20 15:06:51 Leaving retrieve loop for ISO
+2020/02/20 15:06:51 packer: 2020/02/20 15:06:51 No floppy files specified. Floppy disk will not be made.
+2020/02/20 15:06:51 ui: [1;32m==> qemu: Creating required virtual machine disks[0m
+2020/02/20 15:06:51 packer: 2020/02/20 15:06:51 [INFO] Creating disk with Path: builds/packer-debian-10.2-amd64/debian-10.2-amd64 and Size: 65536M
+2020/02/20 15:06:51 packer: 2020/02/20 15:06:51 Executing qemu-img: []string{"create", "-f", "qcow2", "builds/packer-debian-10.2-amd64/debian-10.2-amd64", "65536M"}
+2020/02/20 15:06:51 packer: 2020/02/20 15:06:51 stdout: Formatting 'builds/packer-debian-10.2-amd64/debian-10.2-amd64', fmt=qcow2 size=68719476736 cluster_size=65536 lazy_refcounts=off refcount_bits=16
+2020/02/20 15:06:51 packer: 2020/02/20 15:06:51 stderr:
+2020/02/20 15:06:51 packer: 2020/02/20 15:06:51 Found available port: 8918 on IP: 0.0.0.0
+2020/02/20 15:06:51 ui: [1;32m==> qemu: Starting HTTP server on port 8918[0m
+2020/02/20 15:06:51 packer: 2020/02/20 15:06:51 Looking for available communicator (SSH, WinRM, etc) port between 2222 and 4444
+2020/02/20 15:06:51 packer: 2020/02/20 15:06:51 Found available port: 2608 on IP: 127.0.0.1
+2020/02/20 15:06:51 ui: [1;32m==> qemu: Found port for communicator (SSH, WinRM, etc): 2608.[0m
+2020/02/20 15:06:51 ui: [1;32m==> qemu: Looking for available port between 5900 and 6000 on 127.0.0.1[0m
+2020/02/20 15:06:51 packer: 2020/02/20 15:06:51 Looking for available port between 5900 and 6000 on 127.0.0.1
+2020/02/20 15:06:51 packer: 2020/02/20 15:06:51 Found available port: 5924 on IP: 127.0.0.1
+2020/02/20 15:06:51 ui: [1;32m==> qemu: Starting VM, booting from CD-ROM[0m
+2020/02/20 15:06:51 packer: 2020/02/20 15:06:51 Found available VNC port: 5924 on IP: 127.0.0.1
+2020/02/20 15:06:51 packer: 2020/02/20 15:06:51 Qemu --version output: QEMU emulator version 4.2.0
+2020/02/20 15:06:51 packer: Copyright (c) 2003-2019 Fabrice Bellard and the QEMU Project developers
+2020/02/20 15:06:51 packer: 2020/02/20 15:06:51 Qemu version: 4.2.0
+2020/02/20 15:06:51 packer: 2020/02/20 15:06:51 Qemu Builder has no floppy files, not attaching a floppy.
+2020/02/20 15:06:51 packer: 2020/02/20 15:06:51 Executing /usr/bin/qemu-system-x86_64: []string{"-cdrom", "/home/xiaodong/src/packer-templates/packer_cache/4e8d7ef3e371c5430872b1fcb2b65ae64d8792c9.iso", "-m", "1024M", "-display", "sdl", "-drive", "file=builds/packer-debian-10.2-amd64/debian-10.2-amd64,if=virtio,cache=writeback,discard=ignore,format=qcow2", "-vnc", "127.0.0.1:24", "-machine", "type=pc,accel=kvm", "-device", "virtio-net,netdev=user.0", "-netdev", "user,id=user.0,hostfwd=tcp::2608-:22", "-boot", "once=d", "-name", "debian-10.2-amd64"}
+2020/02/20 15:06:51 packer: 2020/02/20 15:06:51 Started Qemu. Pid: 183167
+2020/02/20 15:06:53 ui: [1;32m==> qemu: Waiting 10s for boot...[0m
+2020/02/20 15:06:55 packer: 2020/02/20 15:06:55 Received interrupt signal (count: 1). Ignoring.
+2020/02/20 15:06:55 packer: 2020/02/20 15:06:55 Received interrupt signal (count: 1). Ignoring.
+2020/02/20 15:06:55 packer: 2020/02/20 15:06:55 Received interrupt signal (count: 1). Ignoring.
+2020/02/20 15:06:55 ui error: Cancelling build after receiving interrupt
+2020/02/20 15:06:55 Cancelling builder after context cancellation context canceled
+2020/02/20 15:06:55 packer: 2020/02/20 15:06:55 Qemu stderr: qemu-system-x86_64: terminating on signal 2
+2020/02/20 15:06:55 packer: 2020/02/20 15:06:55 failed to unlock port lockfile: close tcp 127.0.0.1:5924: use of closed network connection
+2020/02/20 15:06:55 packer: 2020/02/20 15:06:55 failed to unlock port lockfile: close tcp 127.0.0.1:2608: use of closed network connection
+2020/02/20 15:06:55 ui: [1;32m==> qemu: Deleting output directory...[0m
+2020/02/20 15:06:55 [INFO] (telemetry) ending qemu
+2020/02/20 15:06:55 ui error: [1;31mBuild 'qemu' errored: Build was cancelled.[0m
+2020/02/20 15:06:55 ui: Cleanly cancelled builds after being interrupted.
+2020/02/20 15:06:55 [INFO] (telemetry) Finalizing.
+2020/02/20 15:06:57 waiting for all plugin processes to complete...
+2020/02/20 15:06:57 /usr/bin/packer: plugin process exited
+2020/02/20 15:06:57 /usr/bin/packer: plugin process exited
+2020/02/20 15:06:57 /usr/bin/packer: plugin process exited

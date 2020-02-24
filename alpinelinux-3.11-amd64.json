@@ -1,0 +1,66 @@
+{
+  "variables": {
+    "major_version": "3",
+    "minor_version": "11",
+    "revision_version": "3",
+    "alpine_version": "{{user `major_version`}}.{{user `minor_version`}}",
+    "mirror": "http://dl-cdn.alpinelinux.org/alpine",
+    "mirror_directory": "v{{user `alpine_version`}}/releases/x86_64",
+    "iso_name": "alpine-virt-{{user `alpine_version`}}.{{user `revision_version`}}-x86_64.iso",
+    "iso_checksum": "bf82e95b3fa0a4e35391202b60631bb687c935688bc09d4452159d92bf3d0172",
+    "iso_checksum_type": "sha256",
+    "answers_path": "alpinelinux-{{user `major_version`}}/{{user `minor_version`}}-answers.cfg",
+    "name_template": "alpinelinux-{{user `alpine_version`}}.{{user `revision_version`}}-amd64"
+  },
+  "builders": [{
+    "type": "qemu",
+    "cpus": 1,
+    "memory": 1024,
+    "disk_size": 65536,
+    "vm_name": "{{user `name_template`}}",
+    "output_directory": "builds/packer-{{user `name_template`}}",
+    "iso_url": "{{user `mirror`}}/{{user `mirror_directory`}}/{{user `iso_name`}}",
+    "iso_checksum": "{{user `iso_checksum`}}",
+    "iso_checksum_type": "{{user `iso_checksum_type`}}",
+    "http_directory": "http",
+    "boot_wait": "10s",
+    "boot_command": [
+      "<enter><wait10>",
+      "root<enter><wait>",
+      "ifconfig eth0 up && udhcpc -i eth0<enter><wait>",
+      "wget http://{{.HTTPIP}}:{{.HTTPPort}}/{{user `answers_path`}}<enter><wait>",
+      "sed -i -e \"/rc-service/d\" /sbin/setup-sshd<enter><wait>",
+      "printf \"vagrant\\nvagrant\\ny\\n\" | setup-alpine -f {{user `minor_version`}}-answers.cfg ; ",
+      "mount /dev/vda2 /mnt && ",
+      "echo 'PasswordAuthentication yes' >> /mnt/etc/ssh/sshd_config && ",
+      "echo 'PermitRootLogin yes' >> /mnt/etc/ssh/sshd_config && ",
+      "chroot /mnt apk add sudo && ",
+      "umount /mnt ; reboot<enter>"
+    ],
+    "shutdown_command": "echo 'vagrant' | sudo -S poweroff",
+    "communicator": "ssh",
+    "ssh_port": 22,
+    "ssh_username": "root",
+    "ssh_password": "vagrant",
+    "ssh_timeout": "10000s"
+  }],
+  "provisioners": [{
+    "type": "shell",
+    "environment_vars": [
+      "HOME_DIR=/home/vagrant"
+    ],
+    "scripts": [
+      "scripts/alpinelinux/setup.sh",
+      "scripts/common/sudoers.sh",
+      "scripts/common/vagrant.sh",
+      "scripts/alpinelinux/cleanup.sh"
+    ],
+    "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E sh -eux '{{.Path}}'",
+    "expect_disconnect": true
+  }],
+  "post-processors": [{
+    "type": "vagrant",
+    "keep_input_artifact": true,
+    "output": "builds/{{user `name_template`}}-{{.Provider}}.box"
+  }]
+}

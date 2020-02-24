@@ -1,0 +1,53 @@
+{
+  "variables": {
+    "fedora_version": "31",
+    "minor_version": "1.9",
+    "mirror": "http://download.fedoraproject.org/pub/fedora/linux",
+    "mirror_directory": "releases/{{user `fedora_version`}}/Server/x86_64/iso",
+    "iso_name": "Fedora-Server-dvd-x86_64-{{user `fedora_version`}}-{{user `minor_version`}}.iso",
+    "iso_checksum": "225ebc160e40bb43c5de28bad9680e3a78a9db40c9e3f4f42f3ee3f10f95dbeb",
+    "iso_checksum_type": "sha256",
+    "ks_path": "fedora-{{user `fedora_version`}}/ks.cfg",
+    "name_template": "fedora-{{user `fedora_version`}}-amd64"
+  },
+  "builders": [{
+    "type": "qemu",
+    "cpus": 1,
+    "memory": 1024,
+    "disk_size": 65536,
+    "vm_name": "{{user `name_template`}}",
+    "output_directory": "builds/packer-{{user `name_template`}}",
+    "iso_url": "{{user `mirror`}}/{{user `mirror_directory`}}/{{user `iso_name`}}",
+    "iso_checksum": "{{user `iso_checksum`}}",
+    "iso_checksum_type": "{{user `iso_checksum_type`}}",
+    "http_directory": "http",
+    "boot_wait": "10s",
+    "boot_command": [
+      "<tab> linux ks=http://{{.HTTPIP}}:{{.HTTPPort}}/{{user `ks_path`}}<enter><wait>"
+    ],
+    "shutdown_command": "echo 'vagrant' | sudo -S /sbin/shutdown -hP now",
+    "communicator": "ssh",
+    "ssh_port": 22,
+    "ssh_username": "vagrant",
+    "ssh_password": "vagrant",
+    "ssh_timeout": "10000s"
+  }],
+  "provisioners": [{
+    "type": "shell",
+    "environment_vars": [
+      "HOME_DIR=/home/vagrant"
+    ],
+    "scripts": [
+      "scripts/common/sudoers.sh",
+      "scripts/common/vagrant.sh",
+      "scripts/fedora/cleanup.sh"
+    ],
+    "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E sh '{{.Path}}'",
+    "expect_disconnect": true
+  }],
+  "post-processors": [{
+    "type": "vagrant",
+    "keep_input_artifact": true,
+    "output": "builds/{{user `name_template`}}-{{.Provider}}.box"
+  }]
+}
