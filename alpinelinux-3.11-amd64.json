@@ -2,12 +2,12 @@
   "variables": {
     "major_version": "3",
     "minor_version": "11",
-    "revision_version": "3",
+    "revision_version": "5",
     "alpine_version": "{{user `major_version`}}.{{user `minor_version`}}",
     "mirror": "http://dl-cdn.alpinelinux.org/alpine",
     "mirror_directory": "v{{user `alpine_version`}}/releases/x86_64",
     "iso_name": "alpine-virt-{{user `alpine_version`}}.{{user `revision_version`}}-x86_64.iso",
-    "iso_checksum": "bf82e95b3fa0a4e35391202b60631bb687c935688bc09d4452159d92bf3d0172",
+    "iso_checksum": "8e14a8f23d1d0a3772d486a94a7d707df65a942e605617ed6431fcb1ede387e4",
     "iso_checksum_type": "sha256",
     "answers_path": "alpinelinux-{{user `major_version`}}/{{user `minor_version`}}-answers.cfg",
     "name_template": "alpinelinux-{{user `alpine_version`}}.{{user `revision_version`}}-amd64"
